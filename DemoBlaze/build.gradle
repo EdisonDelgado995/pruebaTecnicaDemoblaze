@@ -1,5 +1,5 @@
 plugins {
-    id 'java'// Plugin de Lombok
+    id 'java'
 }
 
 group 'com.tuempresa.proyecto'
@@ -10,6 +10,7 @@ sourceCompatibility = '18'
 repositories {
     mavenCentral()
 }
+
 
 dependencies {
     implementation 'net.serenity-bdd:serenity-core:4.1.4'
@@ -22,12 +23,16 @@ dependencies {
     implementation 'io.cucumber:cucumber-java:7.10.0'
     implementation 'io.cucumber:cucumber-junit:7.10.0'
     implementation 'org.seleniumhq.selenium:selenium-java:4.21.0'
+    implementation group: 'net.serenity-bdd', name: 'serenity-gradle-plugin', version: '2.4.34'
 
 }
+
+
 
 test {
     useJUnitPlatform()
 }
+
 
 tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'

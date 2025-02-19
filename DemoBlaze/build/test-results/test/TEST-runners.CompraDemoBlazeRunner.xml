@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="runners.CompraDemoBlazeRunner" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-18T20:52:57" hostname="PSOFKA0377" time="20.091">
+<testsuite name="runners.CompraDemoBlazeRunner" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-19T12:58:47" hostname="PSOFKA0377" time="25.676">
   <properties/>
-  <testcase name="Compra de productos en Demoblaze" classname="runners.CompraDemoBlazeRunner" time="20.091"/>
+  <testcase name="Compra de productos en Demoblaze" classname="runners.CompraDemoBlazeRunner" time="25.676"/>
   <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[feb. 18, 2025 3:53:00 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+  <system-err><![CDATA[feb. 19, 2025 7:58:51 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find CDP implementation matching 133
-feb. 18, 2025 3:53:00 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
-WARNING: Unable to find version of CDP to use for 133.0.6943.98. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+feb. 19, 2025 7:58:51 A. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 133.0.6943.126. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.21.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ]]></system-err>
 </testsuite>

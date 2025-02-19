@@ -1,0 +1,5 @@
+* Dada las características del sitio demoblaze, se determinó que el mejor patrón de diseño a aplicar era POM, dada la facilidad de organización con respecto a cada página del mismo y sus interacciones.
+
+* La alerta que se genera al añadir un elemento al carrito, en ocasiones no es capturada por la automatización, lo cual puede resultar en pruebas fallidas.
+
+* Debe considerarse ampliar la automatización a escenarios como validar el valor total de la compra o  Cancelar la compra 

@@ -43,5 +43,5 @@ public class CompraPage extends PageObject {
     public String obtenerConfirmacion(){
         return txtMensajeConfirmacion.getText();
     }
-    
+
 }

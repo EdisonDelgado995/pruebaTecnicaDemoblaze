@@ -26,16 +26,35 @@
   &lt;meta name="author" content=""&gt;<br/>
   &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;<br/>
   &lt;link rel="icon" href="favicon.ico"&gt;<br/>
-  &lt;title&gt;STORE&lt;/title&gt;&lt;!-- Bootstrap core CSS --&gt;<br/>
-  &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br/>
+  &lt;title&gt;STORE&lt;/title&gt;<br/>
   &lt;link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet"&gt;<br/>
-  &lt;link href="node_modules/bootstrap-sweetalert/dist/sweetalert.css" rel="stylesheet"&gt;<br/>
   &lt;link href="node_modules/video.js/dist/video-js.min.css" rel="stylesheet"&gt;<br/>
   &lt;link href="css/latofonts.css" rel="stylesheet" type="text/css"&gt;<br/>
   &lt;link href="css/latostyle.css" rel="stylesheet" type="text/css"&gt;<br/>
   &lt;style&gt;<br/>
+    .navbar-toggler {<br/>
+      z-index: 1;<br/>
+    }<br/>
+<br/>
+    @media (max-width: 800px) {<br/>
+      #carouselExampleIndicators {<br/>
+        display: none;<br/>
+      }<br/>
+    }<br/>
+<br/>
+    /* Temporary fix for img-fluid sizing within the carousel */<br/>
+<br/>
+    .carousel-item.active,<br/>
+    .carousel-item-next,<br/>
+    .carousel-item-prev {<br/>
+      display: block;<br/>
+    }<br/>
+<br/>
     body {<br/>
       font-size: 11pt;<br/>
+      /*padding-top: 50px;*/<br/>
+      color: #868688;<br/>
+      background-color: #FAFCFF;<br/>
     }<br/>
 <br/>
     nav {<br/>
@@ -68,6 +87,24 @@
       background: linear-gradient(to right, rgba(135, 15, 93, 1) 0%, rgba(135, 15, 93, 1) 19%, rgba(63, 41, 133, 1) 55%, rgba(40, 17, 115, 1) 100%);<br/>
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#870f5d', endColorstr='#281173', GradientType=1);<br/>
       color: white;<br/>
+    }<br/>
+<br/>
+    #cat {<br/>
+      /*background-color: #e7e7e7*/<br/>
+      background: rgba(135, 15, 93, 1);<br/>
+      background: -moz-linear-gradient(left, rgba(135, 15, 93, 1) 0%, rgba(135, 15, 93, 1) 19%, rgba(63, 41, 133, 1) 55%, rgba(40, 17, 115, 1) 100%);<br/>
+      background: -webkit-gradient(left top, right top, color-stop(0%, rgba(135, 15, 93, 1)), color-stop(19%, rgba(135, 15, 93, 1)), color-stop(55%, rgba(63, 41, 133, 1)), color-stop(100%, rgba(40, 17, 115, 1)));<br/>
+      background: -webkit-linear-gradient(left, rgba(135, 15, 93, 1) 0%, rgba(135, 15, 93, 1) 19%, rgba(63, 41, 133, 1) 55%, rgba(40, 17, 115, 1) 100%);<br/>
+      background: -o-linear-gradient(left, rgba(135, 15, 93, 1) 0%, rgba(135, 15, 93, 1) 19%, rgba(63, 41, 133, 1) 55%, rgba(40, 17, 115, 1) 100%);<br/>
+      background: -ms-linear-gradient(left, rgba(135, 15, 93, 1) 0%, rgba(135, 15, 93, 1) 19%, rgba(63, 41, 133, 1) 55%, rgba(40, 17, 115, 1) 100%);<br/>
+      background: linear-gradient(to right, rgba(135, 15, 93, 1) 0%, rgba(135, 15, 93, 1) 19%, rgba(63, 41, 133, 1) 55%, rgba(40, 17, 115, 1) 100%);<br/>
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#870f5d', endColorstr='#281173', GradientType=1);<br/>
+      color: white;<br/>
+      /*font-family: Lato;*/<br/>
+      font-size: 25px;<br/>
+      font-weight: bold;<br/>
+      /*font-style: normal;*/<br/>
+      /*font-variant: normal;*/<br/>
     }<br/>
 <br/>
     nav a {<br/>
@@ -124,6 +161,82 @@
       align-self: flex-start;<br/>
     }<br/>
 <br/>
+    #carouselExampleIndicators {<br/>
+<br/>
+      /*width: 86%;*/<br/>
+      margin-left: 2%;<br/>
+      -webkit-box-shadow: 0px 11px 5px -1px rgba(0, 0, 0, 0.31);<br/>
+      -moz-box-shadow: 0px 11px 5px -1px rgba(0, 0, 0, 0.31);<br/>
+      box-shadow: 0px 11px 5px -1px rgba(0, 0, 0, 0.31);<br/>
+    }<br/>
+<br/>
+    #contcar {<br/>
+      position: absolute;<br/>
+      display: block;<br/>
+      left: calc(50% - 400px);<br/>
+      top: 22%;<br/>
+      z-index: 2;<br/>
+      margin-left: auto !important;<br/>
+      margin-right: auto;<br/>
+      align-items: center !important;<br/>
+      width: 800px;<br/>
+    }<br/>
+<br/>
+<br/>
+    .carousel-control-prev {<br/>
+      left: -10%;<br/>
+    }<br/>
+<br/>
+    .carousel-control-next {<br/>
+      right: -10%;<br/>
+    }<br/>
+<br/>
+    #contcont {<br/>
+      margin-top: 6%;<br/>
+    }<br/>
+<br/>
+    #article {<br/>
+      line-height: 1.5rem;<br/>
+      height: 4.7rem;<br/>
+      overflow: hidden;<br/>
+      text-overflow: -o-ellipsis-lastline;<br/>
+    }<br/>
+<br/>
+    h2.grrrr {<br/>
+      display: table;<br/>
+      white-space: nowrap;<br/>
+<br/>
+      &:after {<br/>
+        border-top: 3px solid black;<br/>
+        content: '';<br/>
+        display: table-cell;<br/>
+        position: relative;<br/>
+        top: 0.8em;<br/>
+        width: 30%;<br/>
+      }<br/>
+<br/>
+      &:after {<br/>
+        left: 1.5%;<br/>
+      }<br/>
+    }<br/>
+<br/>
+    h4.grrrr {<br/>
+      position: relative;<br/>
+      overflow: hidden;<br/>
+    }<br/>
+<br/>
+<br/>
+    h4.grrrr:after {<br/>
+      display: inline-block;<br/>
+      content: "";<br/>
+      height: 2px;<br/>
+      background: white;<br/>
+      position: absolute;<br/>
+      width: 22%;<br/>
+      top: 50%;<br/>
+      margin-top: 2px;<br/>
+      margin-left: 15px;<br/>
+    }<br/>
 <br/>
     .py-5 {<br/>
       padding-bottom: 1rem !important;<br/>
@@ -134,6 +247,19 @@
       margin-left: 10%;<br/>
     }<br/>
 <br/>
+    .slide-image {<br/>
+      width: 100%;<br/>
+    }<br/>
+<br/>
+    .carousel-holder {<br/>
+      margin-bottom: 30px;<br/>
+    }<br/>
+<br/>
+    .carousel-control,<br/>
+    .item {<br/>
+      border-radius: 4px;<br/>
+    }<br/>
+<br/>
     /*#divcarcont{<br/>
   align-self: flex-end;<br/>
 }*/<br/>
@@ -141,351 +267,8 @@
     html,<br/>
     body {<br/>
       max-width: 100%;<br/>
-      padding: 0px !important;<br/>
       overflow-x: hidden;<br/>
-    }<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-    .product-content {<br/>
-      border: 1px solid #dfe5e9;<br/>
-      margin-bottom: 20px;<br/>
-      margin-top: 12px;<br/>
-      background: #fff<br/>
-    }<br/>
-<br/>
-    .product-content .carousel-control.left {<br/>
-      margin-left: 0<br/>
-    }<br/>
-<br/>
-    .product-content .product-image {<br/>
-      background-color: #fff;<br/>
-      display: block;<br/>
-      min-height: 238px;<br/>
-      overflow: hidden;<br/>
-      position: relative<br/>
-    }<br/>
-<br/>
-    .product-content .product-deatil {<br/>
-      border-bottom: 1px solid #dfe5e9;<br/>
-      padding-bottom: 17px;<br/>
-      padding-left: 16px;<br/>
-      padding-top: 16px;<br/>
-      position: relative;<br/>
-      background: #fff<br/>
-    }<br/>
-<br/>
-    .product-content .product-deatil h5 a {<br/>
-      color: #2f383d;<br/>
-      font-size: 15px;<br/>
-      line-height: 19px;<br/>
-      text-decoration: none;<br/>
-      padding-left: 0;<br/>
-      margin-left: 0<br/>
-    }<br/>
-<br/>
-    .product-content .product-deatil h5 a span {<br/>
-      color: #9aa7af;<br/>
-      display: block;<br/>
-      font-size: 13px<br/>
-    }<br/>
-<br/>
-    .product-content .product-deatil span.tag1 {<br/>
-      border-radius: 50%;<br/>
-      color: #fff;<br/>
-      font-size: 15px;<br/>
-      height: 50px;<br/>
-      padding: 13px 0;<br/>
-      position: absolute;<br/>
-      right: 10px;<br/>
-      text-align: center;<br/>
-      top: 10px;<br/>
-      width: 50px<br/>
-    }<br/>
-<br/>
-    .product-content .product-deatil span.sale {<br/>
-      background-color: #21c2f8<br/>
-    }<br/>
-<br/>
-    .product-content .product-deatil span.discount {<br/>
-      background-color: #71e134<br/>
-    }<br/>
-<br/>
-    .product-content .product-deatil span.hot {<br/>
-      background-color: #fa9442<br/>
-    }<br/>
-<br/>
-    .product-content .description {<br/>
-      font-size: 12.5px;<br/>
-      line-height: 20px;<br/>
-      padding: 10px 14px 16px 19px;<br/>
-      background: #fff<br/>
-    }<br/>
-<br/>
-    .product-content .product-info {<br/>
-      padding: 11px 19px 10px 20px<br/>
-    }<br/>
-<br/>
-    .product-content .product-info a.add-to-cart {<br/>
-      color: #2f383d;<br/>
-      font-size: 13px;<br/>
-      padding-left: 16px<br/>
-    }<br/>
-<br/>
-    .product-content name.a {<br/>
-      padding: 5px 10px;<br/>
-      margin-left: 16px<br/>
-    }<br/>
-<br/>
-    .product-info.smart-form .btn {<br/>
-      padding: 6px 12px;<br/>
-      margin-left: 12px;<br/>
-      margin-top: -10px<br/>
-    }<br/>
-<br/>
-    .product-entry .product-deatil {<br/>
-      border-bottom: 1px solid #dfe5e9;<br/>
-      padding-bottom: 17px;<br/>
-      padding-left: 16px;<br/>
-      padding-top: 16px;<br/>
-      position: relative<br/>
-    }<br/>
-<br/>
-    .product-entry .product-deatil h5 a {<br/>
-      color: #2f383d;<br/>
-      font-size: 15px;<br/>
-      line-height: 19px;<br/>
-      text-decoration: none<br/>
-    }<br/>
-<br/>
-    .product-entry .product-deatil h5 a span {<br/>
-      color: #9aa7af;<br/>
-      display: block;<br/>
-      font-size: 13px<br/>
-    }<br/>
-<br/>
-    .load-more-btn {<br/>
-      background-color: #21c2f8;<br/>
-      border-bottom: 2px solid #037ca5;<br/>
-      border-radius: 2px;<br/>
-      border-top: 2px solid #0cf;<br/>
-      margin-top: 20px;<br/>
-      padding: 9px 0;<br/>
-      width: 100%<br/>
-    }<br/>
-<br/>
-    .product-block .product-deatil p.price-container span,<br/>
-    .product-content .product-deatil p.price-container span,<br/>
-    .product-entry .product-deatil p.price-container span,<br/>
-    .shipping table tbody tr td p.price-container span,<br/>
-    .shopping-items table tbody tr td p.price-container span {<br/>
-      color: #21c2f8;<br/>
-      font-family: Lato, sans-serif;<br/>
-      font-size: 24px;<br/>
-      line-height: 20px<br/>
-    }<br/>
-<br/>
-    .product-info.smart-form .rating label {<br/>
-      margin-top: 0<br/>
-    }<br/>
-<br/>
-    .product-wrap .product-image span.tag2 {<br/>
-      position: absolute;<br/>
-      top: 10px;<br/>
-      right: 10px;<br/>
-      width: 36px;<br/>
-      height: 36px;<br/>
-      border-radius: 50%;<br/>
-      padding: 10px 0;<br/>
-      color: #fff;<br/>
-      font-size: 11px;<br/>
-      text-align: center<br/>
-    }<br/>
-<br/>
-    .product-wrap .product-image span.sale {<br/>
-      background-color: #57889c<br/>
-    }<br/>
-<br/>
-    .product-wrap .product-image span.hot {<br/>
-      background-color: #a90329<br/>
-    }<br/>
-<br/>
-    .shop-btn {<br/>
-      position: relative<br/>
-    }<br/>
-<br/>
-    .shop-btn&gt;span {<br/>
-      background: #a90329;<br/>
-      display: inline-block;<br/>
-      font-size: 10px;<br/>
-      box-shadow: inset 1px 1px 0 rgba(0, 0, 0, .1), inset 0 -1px 0 rgba(0, 0, 0, .07);<br/>
-      font-weight: 700;<br/>
-      border-radius: 50%;<br/>
-      padding: 2px 4px 3px !important;<br/>
-      text-align: center;<br/>
-      line-height: normal;<br/>
-      width: 19px;<br/>
-      top: -7px;<br/>
-      left: -7px<br/>
-    }<br/>
-<br/>
-    .description-tabs {<br/>
-      padding: 30px 0 5px !important<br/>
-    }<br/>
-<br/>
-    .description-tabs .tab-content {<br/>
-      padding: 10px 0<br/>
-    }<br/>
-<br/>
-    .product-deatil {<br/>
-      padding: 30px 30px 50px<br/>
-    }<br/>
-<br/>
-    .product-deatil hr+.description-tabs {<br/>
-      padding: 0 0 5px !important<br/>
-    }<br/>
-<br/>
-    .product-deatil .carousel-control.left,<br/>
-    .product-deatil .carousel-control.right {<br/>
-      background: none !important<br/>
-    }<br/>
-<br/>
-    .product-deatil .glyphicon {<br/>
-      color: #3276b1<br/>
-    }<br/>
-<br/>
-    .product-deatil .product-image {<br/>
-      border-right: none !important<br/>
-    }<br/>
-<br/>
-    .product-deatil .name {<br/>
-      margin-top: 0;<br/>
-      margin-bottom: 0<br/>
-    }<br/>
-<br/>
-    .product-deatil .name small {<br/>
-      display: block<br/>
-    }<br/>
-<br/>
-    .product-deatil .name a {<br/>
-      margin-left: 0<br/>
-    }<br/>
-<br/>
-    .product-deatil .price-container {<br/>
-      font-size: 24px;<br/>
-      margin: 0;<br/>
-      font-weight: 300<br/>
-    }<br/>
-<br/>
-    .product-deatil .price-container small {<br/>
-      font-size: 12px<br/>
-    }<br/>
-<br/>
-    .product-deatil .fa-2x {<br/>
-      font-size: 16px !important<br/>
-    }<br/>
-<br/>
-    .product-deatil .fa-2x&gt;h5 {<br/>
-      font-size: 12px;<br/>
-      margin: 0<br/>
-    }<br/>
-<br/>
-    .product-deatil .fa-2x+a,<br/>
-    .product-deatil .fa-2x+a+a {<br/>
-      font-size: 13px<br/>
-    }<br/>
-<br/>
-    .profile-message ul {<br/>
-      list-style: none;<br/>
-    }<br/>
-<br/>
-    .product-deatil .certified {<br/>
-      margin-top: 10px<br/>
-    }<br/>
-<br/>
-    .product-deatil .certified ul {<br/>
-      padding-left: 0<br/>
-    }<br/>
-<br/>
-    .product-deatil .certified ul li:not(first-child) {<br/>
-      margin-left: -3px<br/>
-    }<br/>
-<br/>
-    .product-deatil .certified ul li {<br/>
-      display: inline-block;<br/>
-      background-color: #f9f9f9;<br/>
-      border: 1px solid #ccc;<br/>
-      padding: 13px 19px<br/>
-    }<br/>
-<br/>
-    .product-deatil .certified ul li:first-child {<br/>
-      border-right: none<br/>
-    }<br/>
-<br/>
-    .product-deatil .certified ul li a {<br/>
-      text-align: left;<br/>
-      font-size: 12px;<br/>
-      color: #6d7a83;<br/>
-      line-height: 16px;<br/>
-      text-decoration: none<br/>
-    }<br/>
-<br/>
-    .product-deatil .certified ul li a span {<br/>
-      display: block;<br/>
-      color: #21c2f8;<br/>
-      font-size: 13px;<br/>
-      font-weight: 700;<br/>
-      text-align: center<br/>
-    }<br/>
-<br/>
-    .product-deatil .message-text {<br/>
-      width: calc(100% - 70px)<br/>
-    }<br/>
-<br/>
-    @media only screen and (min-width:1024px) {<br/>
-      .product-content div[class*=col-md-4] {<br/>
-        padding-right: 0<br/>
-      }<br/>
-<br/>
-      .product-content div[class*=col-md-8] {<br/>
-        padding: 0 13px 0 0<br/>
-      }<br/>
-<br/>
-      .product-wrap div[class*=col-md-5] {<br/>
-        padding-right: 0<br/>
-      }<br/>
-<br/>
-      .product-wrap div[class*=col-md-7] {<br/>
-        padding: 0 13px 0 0<br/>
-      }<br/>
-<br/>
-      .product-content .product-image {<br/>
-        border-right: 1px solid #dfe5e9<br/>
-      }<br/>
-<br/>
-      .product-content .product-info {<br/>
-        position: relative<br/>
-      }<br/>
-    }<br/>
-<br/>
-    #more-information {<br/>
-      opacity: 1;<br/>
-    }<br/>
-<br/>
-    .message img.online {<br/>
-      width: 40px;<br/>
-      height: 40px;<br/>
-    }<br/>
-<br/>
-    a:focus {<br/>
-      color: white;<br/>
-    }<br/>
-<br/>
-    #page-wrapper {<br/>
-      min-height: 300px;<br/>
+      padding: 0px !important;<br/>
     }<br/>
 <br/>
     .navbar-nav {<br/>
@@ -506,6 +289,10 @@
       flex-basis: 44% !important;<br/>
     }<br/>
 <br/>
+    .navbar-brand {<br/>
+      margin-right: 20rem;<br/>
+    }<br/>
+<br/>
     .navbar-toggleable-md .navbar-nav .nav-link {<br/>
       padding-left: 0.5rem;<br/>
       padding-right: 0.5rem;<br/>
@@ -514,6 +301,10 @@
     .navbar-toggleable-md .navbar-collapse {<br/>
       /*display: contents;*/<br/>
       width: 100%;<br/>
+    }<br/>
+<br/>
+    #narvbarx {<br/>
+      align-items: baseline !important;<br/>
     }<br/>
   &lt;/style&gt;<br/>
  &lt;/head&gt;<br/>
@@ -559,36 +350,7 @@
      &lt;/div&gt;<br/>
     &lt;/div&gt;<br/>
    &lt;/div&gt;<br/>
-  &lt;/div&gt;&lt;!-- end modal --&gt; &lt;!-- modal order --&gt;<br/>
-  &lt;div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="orderModalLabel" aria-hidden="true"&gt;<br/>
-   &lt;div class="modal-dialog" role="document"&gt;<br/>
-    &lt;div class="modal-content"&gt;<br/>
-     &lt;div class="modal-header"&gt;<br/>
-      &lt;h5 class="modal-title" id="orderModalLabel"&gt;Place order&lt;/h5&gt;&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt; &lt;span aria-hidden="true"&gt;×&lt;/span&gt; &lt;/button&gt;<br/>
-     &lt;/div&gt;<br/>
-     &lt;div class="modal-body"&gt;<br/>
-      &lt;form&gt;&lt;label for="name" class="form-control-label" id="totalm"&gt;Total: 1020&lt;/label&gt;<br/>
-       &lt;div class="form-group"&gt;&lt;label for="name" class="form-control-label"&gt;Name:&lt;/label&gt; &lt;input type="text" class="form-control" id="name"&gt;<br/>
-       &lt;/div&gt;<br/>
-       &lt;div class="form-group"&gt;&lt;label for="country" class="form-control-label"&gt;Country:&lt;/label&gt; &lt;input type="text" class="form-control" id="country"&gt;<br/>
-       &lt;/div&gt;<br/>
-       &lt;div class="form-group"&gt;&lt;label for="city" class="form-control-label"&gt;City:&lt;/label&gt; &lt;input type="text" class="form-control" id="city"&gt;<br/>
-       &lt;/div&gt;<br/>
-       &lt;div class="form-group"&gt;&lt;label for="card" class="form-control-label"&gt;Credit card:&lt;/label&gt; &lt;input type="text" class="form-control" id="card"&gt;<br/>
-       &lt;/div&gt;<br/>
-       &lt;div class="form-group"&gt;&lt;label for="month" class="form-control-label"&gt;Month:&lt;/label&gt; &lt;input type="text" class="form-control" id="month"&gt;<br/>
-       &lt;/div&gt;<br/>
-       &lt;div class="form-group"&gt;&lt;label for="year" class="form-control-label"&gt;Year:&lt;/label&gt; &lt;input type="text" class="form-control" id="year"&gt;<br/>
-       &lt;/div&gt;<br/>
-       &lt;div class="form-group"&gt;&lt;label id="errors" style="color:red" class="form-control-label"&gt;&lt;/label&gt;<br/>
-       &lt;/div&gt;<br/>
-      &lt;/form&gt;<br/>
-     &lt;/div&gt;<br/>
-     &lt;div class="modal-footer"&gt;&lt;button type="button" class="btn btn-secondary" data-dismiss="modal"&gt;Close&lt;/button&gt; &lt;button type="button" onclick="purchaseOrder()" class="btn btn-primary"&gt;Purchase&lt;/button&gt;<br/>
-     &lt;/div&gt;<br/>
-    &lt;/div&gt;<br/>
-   &lt;/div&gt;<br/>
-  &lt;/div&gt;&lt;!-- end modal order --&gt; &lt;!-- modal logIn --&gt;<br/>
+  &lt;/div&gt;&lt;!-- end modal --&gt; &lt;!-- modal logIn --&gt;<br/>
   &lt;div class="modal fade" id="logInModal" tabindex="-1" role="dialog" aria-labelledby="logInModalLabel" aria-hidden="true"&gt;<br/>
    &lt;div class="modal-dialog" role="document"&gt;<br/>
     &lt;div class="modal-content"&gt;<br/>
@@ -610,17 +372,17 @@
     &lt;/div&gt;<br/>
    &lt;/div&gt;<br/>
   &lt;/div&gt;&lt;!-- end modal --&gt; &lt;!-- modal video --&gt;<br/>
-  &lt;div class="modal fade" id="videoModal" tabindex="-1" role="dialog" aria-labelledby="logInModalLabel" aria-hidden="true"&gt;<br/>
-   &lt;div class="modal-dialog" role="document"&gt;<br/>
+  &lt;div class="modal fade" id="videoModal" role="dialog"&gt;<br/>
+   &lt;div class="modal-dialog"&gt;<br/>
     &lt;div class="modal-content"&gt;<br/>
      &lt;div class="modal-header"&gt;<br/>
-      &lt;h5 class="modal-title" id="logInModalLabel"&gt;About us&lt;/h5&gt;&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt; &lt;span aria-hidden="true"&gt;×&lt;/span&gt; &lt;/button&gt;<br/>
+      &lt;h5 class="modal-title" id="videoModalLabel"&gt;About us&lt;/h5&gt;&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close"&gt; &lt;span aria-hidden="true"&gt;×&lt;/span&gt; &lt;/button&gt;<br/>
      &lt;/div&gt;<br/>
      &lt;div class="modal-body"&gt;<br/>
       &lt;form&gt;<br/>
        &lt;div class="form-group"&gt;<br/>
         &lt;div class="video-js vjs-paused example-video-dimensions vjs-workinghover vjs-v7 vjs-user-active vjs-error vjs-controls-disabled" id="example-video" poster="imgs/front.jpg" tabindex="-1" role="region" lang="en" aria-label="Video Player"&gt;<br/>
-         &lt;video poster="imgs/front.jpg" id="example-video_html5_api" class="vjs-tech" tabindex="-1" role="application" src="blob:https://www.demoblaze.com/c2600440-48ee-4618-8483-d3bcc1cc66bb"&gt;<br/>
+         &lt;video poster="imgs/front.jpg" id="example-video_html5_api" class="vjs-tech" tabindex="-1" role="application" src="blob:https://www.demoblaze.com/c80b69df-c2fc-4fd7-876c-ea55f28f020f"&gt;<br/>
          &lt;/video&gt;<br/>
          &lt;div class="vjs-poster" tabindex="-1" aria-disabled="false" style="background-image: url(&quot;imgs/front.jpg&quot;);"&gt;&lt;/div&gt;<br/>
          &lt;div class="vjs-text-track-display" aria-live="off" aria-atomic="true"&gt;<br/>
@@ -762,71 +524,122 @@
      &lt;/div&gt;<br/>
     &lt;/div&gt;<br/>
    &lt;/div&gt;<br/>
-  &lt;/div&gt;&lt;!-- end modal --&gt; &lt;!-- Navigation --&gt;<br/>
-  &lt;nav style="height:90px" class="navbar navbar-toggleable-md bg-inverse"&gt;&lt;button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation"&gt; &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt; &lt;/button&gt;<br/>
-   &lt;div class="container"&gt;&lt;a class="navbar-brand" id="nava" href="index.html"&gt;&lt;img width="50" height="50" style="margin-right:10px" src="bm.png"&gt; PRODUCT STORE&lt;/a&gt;<br/>
-    &lt;div class="navbar-collapse" id="navbarExample"&gt;<br/>
-     &lt;ul class="navbar-nav ml-auto"&gt;<br/>
-      &lt;li class="nav-item active"&gt;&lt;a class="nav-link" href="index.html"&gt;Home &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;<br/>
-      &lt;li class="nav-item"&gt;&lt;a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br/>
-      &lt;li class="nav-item"&gt;&lt;a class="nav-link" data-toggle="modal" data-target="#videoModal" href="#"&gt;About us&lt;/a&gt;&lt;/li&gt;<br/>
-      &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#" onclick="showcart()"&gt;Cart&lt;/a&gt;&lt;/li&gt;<br/>
-      &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;Log in&lt;/a&gt;&lt;/li&gt;<br/>
-      &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#" style="display:none" id="logout2" onclick="logOut()"&gt;Log out&lt;/a&gt;&lt;/li&gt;<br/>
-      &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#" style="display:none" id="nameofuser"&gt;&lt;/a&gt;&lt;/li&gt;<br/>
-      &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#" id="signin2" data-toggle="modal" data-target="#signInModal" style="display: block;"&gt;Sign up&lt;/a&gt;&lt;/li&gt;<br/>
-     &lt;/ul&gt;<br/>
+  &lt;/div&gt;&lt;!-- Navigation --&gt;<br/>
+  &lt;nav style="height:350px" id="narvbarx" class="navbar navbar-toggleable-md bg-inverse"&gt;&lt;button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarExample" aria-controls="navbarExample" aria-expanded="false" aria-label="Toggle navigation"&gt; &lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt; &lt;/button&gt; &lt;a class="navbar-brand" id="nava" href="index.html"&gt;&lt;img width="50" height="50" style="margin-right:10px" src="bm.png"&gt; PRODUCT STORE&lt;/a&gt;<br/>
+   &lt;div class="navbar-collapse" id="navbarExample"&gt;<br/>
+    &lt;ul class="navbar-nav ml-auto"&gt;<br/>
+     &lt;li class="nav-item active"&gt;&lt;a class="nav-link" href="index.html"&gt;Home &lt;span class="sr-only"&gt;(current)&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;li class="nav-item"&gt;&lt;a class="nav-link" data-toggle="modal" data-target="#exampleModal" href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;li class="nav-item"&gt;&lt;a class="nav-link" data-toggle="modal" data-target="#videoModal" href="#"&gt;About us&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;li class="nav-item"&gt;&lt;a class="nav-link" id="cartur" href="cart.html"&gt;Cart&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#" id="login2" data-toggle="modal" data-target="#logInModal" style="display: block;"&gt;Log in&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#" style="display:none" id="logout2" onclick="logOut()"&gt;Log out&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#" style="display:none" id="nameofuser"&gt;&lt;/a&gt;&lt;/li&gt;<br/>
+     &lt;li class="nav-item"&gt;&lt;a class="nav-link" href="#" id="signin2" data-toggle="modal" data-target="#signInModal" style="display: block;"&gt;Sign up&lt;/a&gt;&lt;/li&gt;<br/>
+    &lt;/ul&gt;<br/>
+   &lt;/div&gt;<br/>
+   &lt;div id="contcar" class="lg-9 md-6"&gt;<br/>
+    &lt;div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"&gt;<br/>
+     &lt;ol class="carousel-indicators"&gt;<br/>
+      &lt;li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"&gt;&lt;/li&gt;<br/>
+      &lt;li data-target="#carouselExampleIndicators" data-slide-to="1"&gt;&lt;/li&gt;<br/>
+      &lt;li data-target="#carouselExampleIndicators" data-slide-to="2"&gt;&lt;/li&gt;<br/>
+     &lt;/ol&gt;<br/>
+     &lt;div class="carousel-inner"&gt;<br/>
+      &lt;div class="carousel-item active"&gt;&lt;img class="d-block img-fluid" src="Samsung1.jpg" alt="First slide"&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div class="carousel-item"&gt;&lt;img class="d-block img-fluid" src="nexus1.jpg" alt="Second slide"&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div class="carousel-item"&gt;&lt;img class="d-block img-fluid" src="iphone1.jpg" alt="Third slide"&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;&lt;a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev"&gt; &lt;span class="carousel-control-prev-icon" aria-hidden="true"&gt;&lt;/span&gt; &lt;span class="sr-only"&gt;Previous&lt;/span&gt; &lt;/a&gt; &lt;a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next"&gt; &lt;span class="carousel-control-next-icon" aria-hidden="true"&gt;&lt;/span&gt; &lt;span class="sr-only"&gt;Next&lt;/span&gt; &lt;/a&gt;<br/>
     &lt;/div&gt;<br/>
    &lt;/div&gt;<br/>
-  &lt;/nav&gt;&lt;!-- cart --&gt;<br/>
-  &lt;div id="page-wrapper"&gt;<br/>
+  &lt;/nav&gt;<br/>
+  &lt;div class="container" id="contcont"&gt;<br/>
    &lt;div class="row"&gt;<br/>
-    &lt;div class="col-lg-8"&gt;<br/>
-     &lt;h2&gt;Products&lt;/h2&gt;<br/>
-     &lt;div class="table-responsive"&gt;<br/>
-      &lt;table class="table table-bordered table-hover table-striped"&gt;<br/>
-       &lt;thead&gt;<br/>
-        &lt;tr&gt;<br/>
-         &lt;th width="120"&gt;Pic&lt;/th&gt;<br/>
-         &lt;th&gt;Title&lt;/th&gt;<br/>
-         &lt;th&gt;Price&lt;/th&gt;<br/>
-         &lt;th&gt;x&lt;/th&gt;<br/>
-        &lt;/tr&gt;<br/>
-       &lt;/thead&gt;<br/>
-       &lt;tbody id="tbodyid"&gt;<br/>
-        &lt;tr class="success"&gt;<br/>
-         &lt;td&gt;&lt;img width="100" height="100" src="imgs/asusm.jpg"&gt;&lt;/td&gt;<br/>
-         &lt;td&gt;ASUS Full HD&lt;/td&gt;<br/>
-         &lt;td&gt;230&lt;/td&gt;<br/>
-         &lt;td&gt;&lt;a href="#" onclick="deleteItem('6f5c3532-4d25-d356-7453-0e05f780b8d4')"&gt;Delete&lt;/a&gt;&lt;/td&gt;<br/>
-        &lt;/tr&gt;<br/>
-        &lt;tr class="success"&gt;<br/>
-         &lt;td&gt;&lt;img width="100" height="100" src="imgs/sony_vaio_5.jpg"&gt;&lt;/td&gt;<br/>
-         &lt;td&gt;Sony vaio i7&lt;/td&gt;<br/>
-         &lt;td&gt;790&lt;/td&gt;<br/>
-         &lt;td&gt;&lt;a href="#" onclick="deleteItem('fc994bfc-a621-c0f9-7be2-d79d85b73162')"&gt;Delete&lt;/a&gt;&lt;/td&gt;<br/>
-        &lt;/tr&gt;<br/>
-       &lt;/tbody&gt;<br/>
-      &lt;/table&gt;<br/>
+    &lt;div class="col-lg-3"&gt;<br/>
+     &lt;div class="list-group"&gt;&lt;a href="" class="list-group-item" id="cat"&gt;CATEGORIES&lt;/a&gt; &lt;a href="#" id="itemc" onclick="byCat('phone')" class="list-group-item"&gt;Phones&lt;/a&gt; &lt;a href="#" id="itemc" onclick="byCat('notebook')" class="list-group-item"&gt;Laptops&lt;/a&gt; &lt;a href="#" id="itemc" onclick="byCat('monitor')" class="list-group-item"&gt;Monitors&lt;/a&gt;<br/>
      &lt;/div&gt;<br/>
     &lt;/div&gt;<br/>
-    &lt;div class="col-lg-1"&gt;<br/>
-     &lt;h2&gt;Total&lt;/h2&gt;<br/>
-     &lt;div position="right" class="panel panel-info"&gt;<br/>
-      &lt;div class="panel-heading"&gt;<br/>
-       &lt;h3 class="panel-title" id="totalp"&gt;1020&lt;/h3&gt;<br/>
+    &lt;div class="col-lg-9"&gt;&lt;!-- &lt;div class="container"&gt; --&gt;<br/>
+     &lt;div class="row" id="tbodyid"&gt;<br/>
+      &lt;div class="col-lg-4 col-md-6 mb-4"&gt;<br/>
+       &lt;div class="card h-100"&gt;<br/>
+        &lt;a href="prod.html?idp_=8"&gt;&lt;img class="card-img-top img-fluid" src="imgs/sony_vaio_5.jpg" alt=""&gt;&lt;/a&gt;<br/>
+        &lt;div class="card-block"&gt;<br/>
+         &lt;h4 class="card-title"&gt;&lt;a href="prod.html?idp_=8" class="hrefch"&gt;Sony vaio i5&lt;/a&gt;&lt;/h4&gt;<br/>
+         &lt;h5&gt;$790&lt;/h5&gt;<br/>
+         &lt;p id="article" class="card-text"&gt;Sony is so confident that the VAIO S is a superior ultraportable laptop that the company proudly compares the notebook to Apple's 13-inch MacBook Pro. And in a lot of ways this notebook is better, thanks to a lighter weight.&lt;/p&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt;<br/>
       &lt;/div&gt;<br/>
-     &lt;/div&gt;&lt;button type="button" class="btn btn-success" data-toggle="modal" data-target="#orderModal"&gt;Place Order&lt;/button&gt;<br/>
+      &lt;div class="col-lg-4 col-md-6 mb-4"&gt;<br/>
+       &lt;div class="card h-100"&gt;<br/>
+        &lt;a href="prod.html?idp_=9"&gt;&lt;img class="card-img-top img-fluid" src="imgs/sony_vaio_5.jpg" alt=""&gt;&lt;/a&gt;<br/>
+        &lt;div class="card-block"&gt;<br/>
+         &lt;h4 class="card-title"&gt;&lt;a href="prod.html?idp_=9" class="hrefch"&gt;Sony vaio i7 &lt;/a&gt;&lt;/h4&gt;<br/>
+         &lt;h5&gt;$790&lt;/h5&gt;<br/>
+         &lt;p id="article" class="card-text"&gt;REVIEW Sony is so confident that the VAIO S is a superior ultraportable laptop that the company proudly compares the notebook to Apple's 13-inch MacBook Pro. And in a lot of ways this notebook is better, thanks to a lighter weight, higher-resolution display, more storage space, and a Blu-ray drive.&lt;/p&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div class="col-lg-4 col-md-6 mb-4"&gt;<br/>
+       &lt;div class="card h-100"&gt;<br/>
+        &lt;a href="prod.html?idp_=11"&gt;&lt;img class="card-img-top img-fluid" src="imgs/macbook_air.jpg" alt=""&gt;&lt;/a&gt;<br/>
+        &lt;div class="card-block"&gt;<br/>
+         &lt;h4 class="card-title"&gt;&lt;a href="prod.html?idp_=11" class="hrefch"&gt;MacBook air&lt;/a&gt;&lt;/h4&gt;<br/>
+         &lt;h5&gt;$700&lt;/h5&gt;<br/>
+         &lt;p id="article" class="card-text"&gt;1.6GHz dual-core Intel Core i5 (Turbo Boost up to 2.7GHz) with 3MB shared L3 cache Configurable to 2.2GHz dual-core Intel Core i7 (Turbo Boost up to 3.2GHz) with 4MB shared L3 cache.&lt;/p&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div class="col-lg-4 col-md-6 mb-4"&gt;<br/>
+       &lt;div class="card h-100"&gt;<br/>
+        &lt;a href="prod.html?idp_=12"&gt;&lt;img class="card-img-top img-fluid" src="imgs/dell.jpg" alt=""&gt;&lt;/a&gt;<br/>
+        &lt;div class="card-block"&gt;<br/>
+         &lt;h4 class="card-title"&gt;&lt;a href="prod.html?idp_=12" class="hrefch"&gt;Dell i7 8gb&lt;/a&gt;&lt;/h4&gt;<br/>
+         &lt;h5&gt;$700&lt;/h5&gt;<br/>
+         &lt;p id="article" class="card-text"&gt;6th Generation Intel Core i7-6500U Dual-Core Processor 2.5 GHz (max boost speed up to 3.1GHz) 4MB L3 Cache, 8GB DDR4 1600 MHz, 1TB 5400 RPM HDD15.6 in Full HD LED-backlit touchscreen with Truelife (1920 x 1080), 10-finger multi-touch support, Intel HD Graphics 520 with shared graphics memory&lt;/p&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div class="col-lg-4 col-md-6 mb-4"&gt;<br/>
+       &lt;div class="card h-100"&gt;<br/>
+        &lt;a href="prod.html?idp_=13"&gt;&lt;img class="card-img-top img-fluid" src="imgs/dell.jpg" alt=""&gt;&lt;/a&gt;<br/>
+        &lt;div class="card-block"&gt;<br/>
+         &lt;h4 class="card-title"&gt;&lt;a href="prod.html?idp_=13" class="hrefch"&gt;2017 Dell 15.6 Inch&lt;/a&gt;&lt;/h4&gt;<br/>
+         &lt;h5&gt;$700&lt;/h5&gt;<br/>
+         &lt;p id="article" class="card-text"&gt;7th Gen Intel Core i7-7500U mobile processor 2.70 GHz with Turbo Boost Technology up to 3.50 GHz, Intel HD Graphics 62015.6 inch Full HD IPS TrueLife LED-backlit touchscreen (1920 x 1080), 10-finger multi-touch support, 360° flip-and-fold design,8GB DDR4 2400 MHz Memory, 1TB 5400 RPM HDD, No optical drive, 3 in 1 card reader (SD SDHC SDXC)&lt;/p&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div class="col-lg-4 col-md-6 mb-4"&gt;<br/>
+       &lt;div class="card h-100"&gt;<br/>
+        &lt;a href="prod.html?idp_=15"&gt;&lt;img class="card-img-top img-fluid" src="imgs/macbook_air.jpg" alt=""&gt;&lt;/a&gt;<br/>
+        &lt;div class="card-block"&gt;<br/>
+         &lt;h4 class="card-title"&gt;&lt;a href="prod.html?idp_=15" class="hrefch"&gt;MacBook Pro&lt;/a&gt;&lt;/h4&gt;<br/>
+         &lt;h5&gt;$1100&lt;/h5&gt;<br/>
+         &lt;p id="article" class="card-text"&gt;Apple has introduced three new versions of its MacBook Pro line, including a 13-inch and 15-inch model with the Touch Bar, a thin, multi-touch strip display that sits above the MacBook Pro's keyboard.&lt;/p&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;form name="frm" id="frm" style="float: right;" onsubmit="return false"&gt;&lt;!-- &lt;button type="button" id="next2" class="btn btn-success"&gt;Next &gt;&lt;/button&gt; --&gt;<br/>
+      &lt;ul class="pagination"&gt;<br/>
+       &lt;li class="page-item"&gt;&lt;button class="page-link" id="prev2" value="1"&gt;Previous&lt;/button&gt;&lt;/li&gt;<br/>
+       &lt;li class="page-item"&gt;&lt;button class="page-link" id="next2" value="9"&gt;Next&lt;/button&gt;&lt;/li&gt;<br/>
+      &lt;/ul&gt;<br/>
+     &lt;/form&gt;<br/>
     &lt;/div&gt;<br/>
-   &lt;/div&gt;&lt;!-- /.row --&gt;<br/>
-  &lt;/div&gt;&lt;!-- end cart --&gt;<br/>
+   &lt;/div&gt;<br/>
+  &lt;/div&gt;<br/>
   &lt;script src="node_modules/jquery/dist/jquery.min.js"&gt;&lt;/script&gt;<br/>
   &lt;script src="node_modules/video.js/dist/video.min.js"&gt;&lt;/script&gt;<br/>
   &lt;script src="node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js"&gt;&lt;/script&gt;<br/>
   &lt;script src="node_modules/tether/dist/js/tether.min.js"&gt;&lt;/script&gt;<br/>
   &lt;script src="node_modules/bootstrap/dist/js/bootstrap.min.js"&gt;&lt;/script&gt;<br/>
-  &lt;script src="node_modules/bootstrap-sweetalert/dist/sweetalert.min.js"&gt;&lt;/script&gt;<br/>
-  &lt;script type="text/javascript" src="js/cart.js"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" src="js/index.js"&gt;&lt;/script&gt;<br/>
   &lt;div id="footc"&gt;<br/>
    &lt;div id="fotcont" class="row"&gt;<br/>
     &lt;div class="col-sm-4 col-lg-4 col-md-4"&gt;<br/>
